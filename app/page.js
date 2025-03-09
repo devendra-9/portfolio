@@ -1,3 +1,8 @@
+import Start from "./Dashboard";
 export default function Home() {
-  return <></>;
+  return (
+    <>
+      <Start />
+    </>
+  );
 }
