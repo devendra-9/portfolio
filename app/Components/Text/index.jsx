@@ -1,24 +1,15 @@
-export default function ButtonV1({
-  color = "#FEE715",
-  backgroundcolor = "black",
-  radius,
+export default function Text({
+  children,
   width,
   height,
-  children,
-  padding,
+  fontSize,
+  color,
+  fontFamily = "cursive",
+  fontWeight = "600",
+  display,
+  justify,
+  alignItem,
 }) {
-  const generate_radius = (value) => {
-    switch (value) {
-      case "3":
-        return "10px";
-      case "3.5":
-        return "15px";
-      case "4":
-        return "20px";
-      default:
-        return null;
-    }
-  };
   const generate_height = (value) => {
     switch (value) {
       case "3":
@@ -27,6 +18,8 @@ export default function ButtonV1({
         return "35px";
       case "4":
         return "40px";
+      case "10":
+        return "100px";
       default:
         return null;
     }
@@ -44,17 +37,20 @@ export default function ButtonV1({
     }
   };
   return (
-    <button
+    <h1
       style={{
-        color: color,
-        backgroundColor: backgroundcolor,
         height: generate_height(height),
         width: generate_width(width),
-        borderRadius: generate_radius(radius),
-        padding: padding,
+        fontSize: fontSize,
+        fontFamily: fontFamily,
+        fontWeight: fontWeight,
+        color: color,
+        display: display,
+        justifyContent: justify,
+        alignItems: alignItem,
       }}
     >
       {children}
-    </button>
+    </h1>
   );
 }

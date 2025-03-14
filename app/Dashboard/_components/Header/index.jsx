@@ -1,35 +1,81 @@
+import Flex from "@/app/Components/Flex";
+import Text from "@/app/Components/Text";
 import React from "react";
 
 const Header = () => {
   return (
     <>
-      <div
-        style={{
-          width: "100%",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItem: "center",
-          borderBottom: "1px solid white",
-          height: "80px",
-          backgroundColor: "green",
-        }}
+      <Flex
+        height={"10"}
+        width={"4"}
+        display={"flex"}
+        justify={"space-between"}
+        alignItem={"center"}
+        borderBottom={"1px solid white"}
       >
-        <div>
-          <h1
-            style={{
-              padding: "0px 15px",
-              color: "#FEE715",
-              fontFamily: "monospace",
-              fontSize: "40px",
-            }}
-          >
+        <Flex width={"5"} display={"flex"} padding={"0px 15px"}>
+          <Text height={"4"} fontSize={"30px"} color={"#FEE715"}>
             Devendra Kandpal
-          </h1>
-        </div>
-        <div>
-          <h1>Option button</h1>
-        </div>
-      </div>
+          </Text>
+        </Flex>
+        <Flex
+          width={"5"}
+          display={"flex"}
+          justify={"flex-end"}
+          alignItem={"center"}
+          padding={"0px 15px"}
+          gap={"5px"}
+        >
+          <Text
+            width={"4"}
+            height={"4"}
+            color={"white"}
+            fontFamily={"arial"}
+            fontSize={"20px"}
+            display={"flex"}
+            justify={"center"}
+            alignItem={"center"}
+          >
+            About
+          </Text>
+          <Text
+            width={"4"}
+            height={"4"}
+            color={"white"}
+            fontFamily={"arial"}
+            fontSize={"20px"}
+            display={"flex"}
+            justify={"center"}
+            alignItem={"center"}
+          >
+            Projects
+          </Text>
+          <Text
+            width={"4"}
+            height={"4"}
+            color={"white"}
+            fontFamily={"arial"}
+            fontSize={"20px"}
+            display={"flex"}
+            justify={"center"}
+            alignItem={"center"}
+          >
+            Education
+          </Text>
+          <Text
+            width={"4"}
+            height={"4"}
+            color={"white"}
+            fontFamily={"arial"}
+            fontSize={"20px"}
+            display={"flex"}
+            justify={"center"}
+            alignItem={"center"}
+          >
+            Contact
+          </Text>
+        </Flex>
+      </Flex>
     </>
   );
 };
