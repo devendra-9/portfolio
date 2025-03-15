@@ -1,7 +1,12 @@
+import Flex from "@/app/Components/Flex";
 import React from "react";
 
 const Home = () => {
-  return <div>Home page </div>;
+  return (
+    <>
+      <Flex>Hello</Flex>
+    </>
+  );
 };
 
 export default Home;

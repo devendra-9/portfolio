@@ -9,6 +9,7 @@ export default function Text({
   display,
   justify,
   alignItem,
+  cursor = "default",
 }) {
   const generate_height = (value) => {
     switch (value) {
@@ -18,6 +19,8 @@ export default function Text({
         return "35px";
       case "4":
         return "40px";
+      case "5":
+        return "50px";
       case "10":
         return "100px";
       default:
@@ -48,6 +51,7 @@ export default function Text({
         display: display,
         justifyContent: justify,
         alignItems: alignItem,
+        cursor: cursor,
       }}
     >
       {children}

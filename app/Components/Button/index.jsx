@@ -4,8 +4,16 @@ export default function ButtonV1({
   radius,
   width,
   height,
-  children,
   padding,
+  fontSize,
+  fontFamily = "cursive",
+  fontWeight = "600",
+  display,
+  justify,
+  alignItem,
+  border,
+  cursor = "default",
+  children,
 }) {
   const generate_radius = (value) => {
     switch (value) {
@@ -52,6 +60,14 @@ export default function ButtonV1({
         width: generate_width(width),
         borderRadius: generate_radius(radius),
         padding: padding,
+        fontSize: fontSize,
+        fontFamily: fontFamily,
+        fontWeight: fontWeight,
+        display: display,
+        justifyContent: justify,
+        alignItems: alignItem,
+        border: border,
+        cursor: cursor,
       }}
     >
       {children}

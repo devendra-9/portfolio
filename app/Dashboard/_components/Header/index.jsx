@@ -1,8 +1,15 @@
+import ButtonV1 from "@/app/Components/Button";
 import Flex from "@/app/Components/Flex";
 import Text from "@/app/Components/Text";
-import React from "react";
+import { ThemeContext } from "@/app/context/darklight_theme.jsx";
+import React, { useContext } from "react";
 
 const Header = () => {
+  //   const [theme, settheme] = useContext(ThemeContext);
+
+  //   const handle_mode = () => {
+  //     settheme(!theme);
+  //   };
   return (
     <>
       <Flex
@@ -26,6 +33,22 @@ const Header = () => {
           padding={"0px 15px"}
           gap={"5px"}
         >
+          <ButtonV1
+            width={"4"}
+            height={"4"}
+            color={"white"}
+            fontFamily={"arial"}
+            fontSize={"20px"}
+            display={"flex"}
+            justify={"center"}
+            alignItem={"center"}
+            border={"1px solid white"}
+            cursor={"pointer"}
+            radius={"3"}
+            // onClick={handle_mode}
+          >
+            {/* {theme ? "Dark" : "Light"} */}
+          </ButtonV1>
           <Text
             width={"4"}
             height={"4"}
@@ -35,6 +58,7 @@ const Header = () => {
             display={"flex"}
             justify={"center"}
             alignItem={"center"}
+            cursor={"pointer"}
           >
             About
           </Text>
@@ -47,6 +71,7 @@ const Header = () => {
             display={"flex"}
             justify={"center"}
             alignItem={"center"}
+            cursor={"pointer"}
           >
             Projects
           </Text>
@@ -59,6 +84,7 @@ const Header = () => {
             display={"flex"}
             justify={"center"}
             alignItem={"center"}
+            cursor={"pointer"}
           >
             Education
           </Text>
@@ -71,6 +97,7 @@ const Header = () => {
             display={"flex"}
             justify={"center"}
             alignItem={"center"}
+            cursor={"pointer"}
           >
             Contact
           </Text>
